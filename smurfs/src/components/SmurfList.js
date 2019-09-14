@@ -16,6 +16,7 @@ const SmurfList = props => {
 
     return (
     <div>
+        
         {smurfs.map(item => <SmurfCard key={item.id} item={item}/>)}
     </div>
     )
@@ -23,8 +24,8 @@ const SmurfList = props => {
 
 const mapStateToProps = state => {
     return {
-        isFetching: state.isFetching,
         smurfs: state.smurfs,
+        isFetching: state.isFetching,
         error: state.error
     }
 }
